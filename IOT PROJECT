@@ -1,0 +1,113 @@
+Internet of Things Based Smart Traffic Light System
+By 
+OLUWASEMILORE ANGEL WILLIAMS, S0026563@ATU.IE
+MARGARETHA SATRIADI, S00265097@ATU.IE 
+DAVID JONATHAN, S00272373@ATU.IE
+
+ 
+
+Youtube Reference Link 
+Trello page: https://trello.com/invite/b/67ca1e78b946d4acddf9d0bb/ATTI64868083dd735e0d76088b6573dd8fc8A5CAD9BD/simple-project-board
+Github Teams Page:
+ApilAngelDavid · semzyWorld Team
+
+Project Summary
+The IoT-Based Smart Traffic Light System aims at enhancing road safety, optimizing traffic flow, and increasing energy efficiency using smart sensors and cloud connectivity. The project uses Arduino Yun, PIR (Passive Infrared) sensors, and IoT technology to create an interactive and data-driven traffic management system.
+A system based on a PIR sensor to detect an approach of vehicles and dynamically manage traffic lights to make sure the traffic flow smooth. Pedestrians can request to cross the road by a push-button facility. The integration with the cloud platform can make a real-time monitoring of traffic and analysis, which can be used to improve urban mobility by city planners.
+Traffic congestion is a huge problem in cities worldwide. Long wait times, inefficient traffic signals, and delays for emergency vehicles make things even worse. Traditional traffic lights follow fixed timers, which don’t account for real-time traffic flow. This leads to unnecessary delays, wasted fuel, and increased pollution.
+Our solution? A smart traffic light system that adapts in real-time using IoT. This system will:
+✔ Adjust traffic light timings based on real-time vehicle detection.
+✔ Give priority to emergency vehicles using RFID.
+✔ Improve pedestrian safety with push-button crossings.
+✔ Send live traffic data to the cloud for monitoring and analysis.
+By making traffic signals smarter, we can cut down congestion, reduce emissions, and improve overall traffic efficiency.
+How It Works
+Vehicle Detection & Smart Timing
+•	IR or Ultrasonic sensors count vehicles at intersections.
+•	Based on real-time data, the microcontroller adjusts green light duration dynamically.
+•	If a road is empty, the light doesn’t stay green unnecessarily.
+Emergency Vehicle Priority
+•	RFID tags on ambulances and fire trucks trigger an automatic green light.
+•	This allows emergency vehicles to pass without delay, potentially saving lives.
+Pedestrian Safety Features
+•	A push button lets pedestrians request to cross.
+•	After a short delay, the system safely changes the signal.
+IoT Connectivity for Real-Time Monitoring
+•	Traffic data is sent to the cloud using Firebase or Thingspeak.
+•	City officials can remotely monitor and control signals if needed.
+
+What We Need for This Project
+Hardware Components
+✅ Arduino Uno – The brain of the system.
+
+
+ 
+
+✅ IR Sensors – Detect vehicles.
+ 
+
+✅ RFID Module (RC522) – Recognizes emergency vehicles.
+ 
+✅ Traffic Light LEDs – Red, yellow, and green lights.
+ 
+
+✅ ESP8266 Wi-Fi Module – Sends data to the cloud.
+ 
+✅ Push Button – Lets pedestrians request crossings.
+ 
+
+Software & Cloud Tools
+💻 Arduino IDE – To program the system.
+🌐 Firebase / Thingspeak – To store and analyze real-time traffic data.
+📌 Trello – For managing tasks.
+🔗 GitHub – To share and track project code.
+Main Features and Goals
+Automated Traffic Control Uses PIR sensors to detect vehicles and pedestrians
+Energy Efficiency: Power reduced using lights with LED technology.
+IoT Integration: Data integration with the Arduino Yun Wi-Fi module for real-time data streaming.
+Pedestrian Safety: Pedestrian mode activated by push button.
+Data Logging & Analytics: Sends data to cloud service (e.g. Thing speak, Blynk or Arduino IoT Cloud) for analysis.
+
+System Design & Code Example
+Here’s how the circuit is set up:
+•	Sensors at intersections detect vehicle flow.
+•	Arduino processes data and adjusts signals accordingly.
+•	Wi-Fi module sends real-time updates to the cloud.
+
+ 
+
+ Testing the System
+Before we deploy the system, we need to make sure everything works correctly.
+Hardware Testing
+✅ Sensors correctly detect vehicles.
+✅ RFID module properly recognizes emergency vehicles.
+✅ Pedestrian button triggers the correct signal change.
+Software Testing
+✅ Traffic data successfully uploads to Firebase/Thingspeak.
+✅ IoT dashboard correctly displays real-time traffic status.
+✅ System responds accurately in simulated traffic conditions.
+
+Security Considerations
+Potential Risks
+🚨 Hacking Threats – Someone could manipulate traffic signals remotely.
+🚨 Unauthorized RFID Use – Fake emergency vehicles could abuse priority access.
+🚨 Data Integrity Issues – Incorrect data could cause system failures.
+How We Handle Security
+✔ SSL encryption for IoT data (Learn More).
+✔ Authentication for RFID tags – Only verified emergency vehicles get priority.
+✔ System updates & monitoring to prevent cyberattacks.
+optimization.
+
+References & Useful Links
+- Arduino Yun Documentation: [https://docs.arduino.cc/] (https://docs.arduino.cc/)
+- PIR Sensor Working Principle: [https://www.electronics-tutorials.ws/] (https://www.electronics-tutorials.ws/)
+- IoT Traffic Management Systems: 
+
+
+IoT Traffic Light Control with ESP8266
+Smart Traffic Signal Management Using AI
+Thingspeak for Real-time Traffic Monitoring
+Security in IoT-Based Traffic Systems
+C++ Tutorial
+Top 10 IoT Devices Examples with AI in 2024: Innovating the Connected World – IoT Magazine
+upperinc.com/glossary/route-optimization/traffic-congestion-constraints/
