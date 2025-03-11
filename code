@@ -1,0 +1,40 @@
+int redLight = 2, yellowLight = 3, greenLight = 4;
+int pirSensor = 5;  // PIR Sensor input pin
+int pedestrianButton = 6;
+
+void setup() {
+  pinMode(redLight, OUTPUT);
+  pinMode(yellowLight, OUTPUT);
+  pinMode(greenLight, OUTPUT);
+  pinMode(pirSensor, INPUT);
+  pinMode(pedestrianButton, INPUT_PULLUP);
+}
+
+void loop() {
+  int motionDetected = digitalRead(pirSensor);
+  int pedestrianRequest = digitalRead(pedestrianButton);
+
+  if (motionDetected == HIGH) {
+    // Vehicle or pedestrian detected → Green light ON
+    digitalWrite(greenLight, HIGH);
+    delay(10000);  // Keep green for 10s
+    digitalWrite(greenLight, LOW);
+    
+    // Transition to yellow before stopping traffic
+    digitalWrite(yellowLight, HIGH);
+    delay(3000);
+    digitalWrite(yellowLight, LOW);
+
+    // Stop traffic with red light
+    digitalWrite(redLight, HIGH);
+    delay(5000);
+    digitalWrite(redLight, LOW);
+  }
+
+  if (pedestrianRequest == LOW) {
+    // Pedestrian wants to cross → Stop vehicles
+    digitalWrite(redLight, HIGH);
+    delay(7000);  // Allow safe crossing time
+    digitalWrite(redLight, LOW);
+  }
+}
